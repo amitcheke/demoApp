@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
@@ -16,10 +16,8 @@ export class HeaderComponent implements OnInit {
   }
   isCollapsed = true;
 
-  @Input() home: HomeComponent;
-
-  @HostListener('click')
-  click() {
-    this.home.scrollTo();
+  @Input() data: HomeComponent;
+  scrollTo(){
+      this.data.scrollTo();
   }
 }
