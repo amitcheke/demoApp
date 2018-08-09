@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef  } from '@angular/core';
 
 
 @Component({
@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   scrollTo() {
-  alert('in')
-this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+		this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
 
 }

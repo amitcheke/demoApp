@@ -19,15 +19,14 @@ navbar-light bg-light">
        [ngClass]="{'show': !isCollapsed}">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link"
-           href="javascript:void(0);"  (click)="scrollTo()">Home</a>
+        <a class="nav-link" [routerLink]="['/home']">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"
-           href="#">Services</a>
+           href="#"  (click)="scrollTo(); false">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Industries</a>
+        <a class="nav-link" routerLink="/home" fragment="industries">Industries</a>
       </li>
     </ul>
   </div>
