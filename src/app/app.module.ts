@@ -6,13 +6,17 @@ import { ButtonsModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { BuyerComponent } from './buyer/buyer.component';
-import { FragmentPolyfillModule } from "./fragment-polyfill.module";
+import { FragmentPolyfillModule } from "./shared_module/fragment-polyfill.module";
+import { BuyerFirstStepComponent } from './buyer-first-step/buyer-first-step.component';
+import { BuyerSecondStepComponent } from './buyer-second-step/buyer-second-step.component';
+
 
 const appRoutes: Routes =[
   {path:'', component: HomeComponent},
-  {path:'buyer', component: BuyerComponent},
+  {path:'buyer-first-step', component: BuyerFirstStepComponent},
   {path:'home', component: HomeComponent},
+  {path:'buyer-second-step', component: BuyerSecondStepComponent}
+  
 ];
 
 @NgModule({
@@ -20,7 +24,8 @@ const appRoutes: Routes =[
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    BuyerComponent
+    BuyerFirstStepComponent,
+    BuyerSecondStepComponent
   ],
   imports: [
     BrowserModule,
