@@ -1,9 +1,63 @@
-<div id="home" class="home" #home> Home 
-<br>
-<br>
-<div class="container">
-	  <button class="btn btn-primary mr-1" [routerLink]="['/buyer-first-step']">buyer</button>
-	  <button class="btn btn-primary">Seller</button>
+<div id="home" class="home" #home> 
+<div class="container py-5">
+
+<div class="card-columns">
+        
+		<div class="card text-center bg-secondary text-white">
+		  <div class="card-header">
+		    <h5>Cost Reduction</h5>
+		  </div>
+		  <img class="card-img-top" src="/assets/images/prt_cost_reduction.jpg">
+		  <div class="card-body card-img-overlay">
+		   <div class="card-body">
+		    <h5 class="card-title"></h5>
+		  </div>
+		  </div>
+		  <div class="card-footer">
+		    We help our customers to reduce their
+			direct & Indirect procurement costs
+			involved in overseas procurement. We
+			offer cost reduction opportunities by
+			identifying cost competitive sources &
+			accessing them with the help of our
+			localised workforce.
+		  </div>
+		</div>
+       
+        <div class="card">
+             <img class="card-img-top" src="/assets/images/prt_quality.jpg">
+			  <div class="card-body">
+			    <h5 class="card-title">Quality Improvement</h5>
+			    <p class="card-text">We focus on continuous quality
+				improvement by closely monitoring each
+				stage of the manufacturing process &
+				carrying out in process inspections . We
+				also take the complete responsibility of
+				the products quality up to the customers
+				acceptance.</p>
+			  </div>
+        </div>
+        <div class="card  bg-secondary text-white">
+		  <img class="card-img" src="/assets/images/prt_logistics.png" alt="Card image">
+		  
+		  <div class="card-body card-img-overlay">
+		   <div class="card-body">
+		    <h5 class="card-title">On Time Delivery</h5>
+		  </div>
+		  <div class="card-footer">
+		    <p class="card-text">We handle entire domestic supply
+			chain activities from manufacturer to
+			shipping. All domestic
+			transportations are carried out by our
+			approved logistics and our own
+			warehousing facilities.</p>
+		  </div>
+		  </div>
+		</div>
+        
+    </div>
+<button class="btn btn-primary mr-1" [routerLink]="['/buyer-first-step']">buyer</button>
+<button class="btn btn-primary">Seller</button>
 </div>
 </div>
 <div id="services" class="services"> Services </div>

@@ -1,14 +1,15 @@
 .home{
-	height: 350px;
-	background-color: lightblue;
+	height: auto;
 }
 
 .services{
-	height: 350px;
+	height: auto;
+	min-height: 150px;
 	background-color: lightcoral;
 }
 
 .industries{
-	height: 350px;
+	height: auto;
+	min-height: 150px;
 	background-color: lightgreen;
 }
