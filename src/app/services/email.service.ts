@@ -15,7 +15,7 @@ export interface IMessage {
   providedIn: 'root'
 })
 export class EmailService {
-  private emailUrl = '/assets/email.php';
+  private emailUrl = '/feedback/saveFeedback';
 
   constructor(private http: HttpClient) {
 
