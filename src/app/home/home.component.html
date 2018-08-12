@@ -1,63 +1,65 @@
-<div id="home" class="home" #home> 
-<div class="container py-5">
-
-<div class="card-columns">
-        
-		<div class="card text-center bg-secondary text-white">
-		  <div class="card-header">
-		    <h5>Cost Reduction</h5>
-		  </div>
-		  <img class="card-img-top" src="/assets/images/prt_cost_reduction.jpg">
-		  <div class="card-body card-img-overlay">
-		   <div class="card-body">
-		    <h5 class="card-title"></h5>
-		  </div>
-		  </div>
-		  <div class="card-footer">
-		    We help our customers to reduce their
-			direct & Indirect procurement costs
-			involved in overseas procurement. We
-			offer cost reduction opportunities by
-			identifying cost competitive sources &
-			accessing them with the help of our
-			localised workforce.
-		  </div>
-		</div>
-       
-        <div class="card">
-             <img class="card-img-top" src="/assets/images/prt_quality.jpg">
-			  <div class="card-body">
-			    <h5 class="card-title">Quality Improvement</h5>
-			    <p class="card-text">We focus on continuous quality
-				improvement by closely monitoring each
-				stage of the manufacturing process &
-				carrying out in process inspections . We
-				also take the complete responsibility of
-				the products quality up to the customers
-				acceptance.</p>
-			  </div>
-        </div>
-        <div class="card  bg-secondary text-white">
-		  <img class="card-img" src="/assets/images/prt_logistics.png" alt="Card image">
-		  
-		  <div class="card-body card-img-overlay">
-		   <div class="card-body">
-		    <h5 class="card-title">On Time Delivery</h5>
-		  </div>
-		  <div class="card-footer">
-		    <p class="card-text">We handle entire domestic supply
-			chain activities from manufacturer to
-			shipping. All domestic
-			transportations are carried out by our
-			approved logistics and our own
-			warehousing facilities.</p>
-		  </div>
-		  </div>
-		</div>
-        
+<div id="home" class="home" #home > 
+<div class="container-fluid">
+	<div class="world-map m-2"></div>
+</div>	
+<div class="container">
+ <div class="row p-3">
+    <div class="col-md-4">
+    	<div class="ml-1 mb-2 mr-1">	
+      <div class="img" style="background-image: url('/assets/images/prt_cost_reduction.jpg');">
+      	<div class="img-header"><h3>Cost Reduction</h3></div>
+      	<div class="img-footer">We help our customers to reduce their
+direct & Indirect procurement costs
+involved in overseas procurement. We
+offer cost reduction opportunities by
+identifying cost competitive sources &
+accessing them with the help of our
+localised workforce.</div>
+      </div>
+  </div>
     </div>
-<button class="btn btn-primary mr-1" [routerLink]="['/buyer-first-step']">buyer</button>
-<button class="btn btn-primary">Seller</button>
+    <div class="col-md-4">
+    	<div class="ml-1 mb-2 mr-1">
+      <div class="img" style="background-image: url('/assets/images/prt_quality.jpg');">
+      	<div class="img-header"><h3>Quality Improvement</h3></div>
+      	<div class="img-footer">We focus on continuous quality
+improvement by closely monitoring each
+stage of the manufacturing process &
+carrying out in process inspections . We
+also take the complete responsibility of
+the products quality up to the customers
+acceptance. </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+    	<div class="ml-1 mb-2 mr-1">
+      <div class="img" style="background-image: url('/assets/images/prt_logistics.png');">
+      	<div class="img-header"><h3>On Time Delivery</h3></div>
+      	<div class="img-footer">We handle entire domestic supply
+chain activities from manufacturer to
+shipping. All domestic
+transportations are carried out by our
+approved logistics and our own
+warehousing facilities. </div>
+      </div>
+	</div>
+    </div>
+    
+  </div>
+  <div class="row justify-content-center">
+	  <h2>Who are you ?</h2>
+</div>
+ <div class="row justify-content-center who-are-you">
+	<button class=" btn btn-outline-success mr-3 btn-lg" [routerLink]="['/buyer-first-step']">I am Buyer</button>
+	<button class="btn btn-outline-warning btn-lg">I am Seller</button>
+</div>
+<br>
+<div class="row justify-content-center who-are-you">
+	<button class=" btn btn-success mr-3 btn-lg" [routerLink]="['/buyer-first-step']">I am Buyer</button>
+	<button class="btn btn-warning btn-lg">I am Seller</button>
+</div>
+	
 </div>
 </div>
 <div id="services" class="services"> Services </div>
