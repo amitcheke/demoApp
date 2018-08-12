@@ -28,8 +28,9 @@
 .img-header{
 	position: absolute;
 	top: 0;
-	background-color: rgba(0,0,0,0.4);
-	height: 40px;
+	background-color: rgba(0,0,0,0.6);
+	height: 50px;
+	padding-top: 8px;
 	width: 100%;
 	color: white;
     text-align: center;
@@ -39,7 +40,7 @@
 	position: absolute;
 	bottom: 0;
 	color: white;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.6);
 	height: 40%;
 	width: 100%;
 	padding: 4% 0% 0% 3%;
@@ -70,6 +71,10 @@
 	    background-size: cover;
 	    position: relative;
   }
+
+  .img-footer{
+  	height: 30%;
+  }
   
 }
 
@@ -89,6 +94,10 @@
 	    background-size: cover;
 	    position: relative;
   }
+
+  .img-footer{
+  	height: 30%;
+  }
   
 }
 
@@ -98,7 +107,15 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+  .img{
+  	margin-right: -15px;
+    margin-left: -15px;
+    padding: 155% 0% 155% 0%;
+    background-position: 65% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
   
 }
 
@@ -109,8 +126,9 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-  /*CSS*/
-  
+  .img-footer{
+  	height: 30%;
+  }
 }
 
 /* 
@@ -120,7 +138,9 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   
-  /*//CSS*/
+  .img-footer{
+  	height: 30%;
+  }
   
 }
 
@@ -134,7 +154,7 @@
   .img{
   	margin-right: -15px;
     margin-left: -15px;
-    padding: 36% 0% 95.5% 0%;
+    padding: 46% 0% 95.5% 0%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
