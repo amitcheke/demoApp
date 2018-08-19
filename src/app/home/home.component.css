@@ -4,15 +4,10 @@
 
 .services{
 	height: auto;
-    margin-top: 75px;
-	min-height: 150px;
-	background-color: lightcoral;
 }
 
 .industries{
 	height: auto;
-	min-height: 150px;
-	background-color: lightgreen;
 }
 
 .img {
@@ -46,14 +41,18 @@
 	padding: 4% 0% 0% 3%;
 }
 .world-map {
-    padding: 0% 0% 50% 0%;
+    padding: 0% 0% 34% 0%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(/assets/images/map.jpg);
 }
 
 .who-are-you>.btn-lg{
-    border-radius: 3.3rem;
+    border-radius: 0rem;
+}
+
+.text-cards{
+	height:20vmin;
 }
 /* 
   ##Device = Desktops
@@ -74,6 +73,10 @@
 
   .img-footer{
   	height: 30%;
+  }
+
+  .align-hero-baner-text{
+  	margin-top: 100px;
   }
   
 }
@@ -99,6 +102,9 @@
   	height: 30%;
   }
   
+  .align-hero-baner-text{
+  	margin-top: 100px;
+  }
 }
 
 /* 
@@ -141,6 +147,14 @@
   .img-footer{
   	height: 30%;
   }
+
+  .world-map{
+  	padding: 0% 0% 50% 50%;
+  }
+
+  .text-cards{
+	height:20vmin;
+	}
   
 }
 
@@ -160,5 +174,13 @@
     background-size: cover;
     position: relative;
   }
+  .world-map{
+  	padding: 0% 0% 50% 50%;
+  }
+
+  .text-cards{
+	height:40vmin;
+	color: white
+}
   
 }
