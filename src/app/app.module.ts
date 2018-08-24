@@ -12,6 +12,8 @@ import { FragmentPolyfillModule } from "./shared_module/fragment-polyfill.module
 import { BuyerFirstStepComponent } from './buyer-first-step/buyer-first-step.component';
 import { BuyerSecondStepComponent } from './buyer-second-step/buyer-second-step.component';
 
+import { BuyerService } from './services/buyer.service';
+
 
 const appRoutes: Routes =[
   {path:'', component: HomeComponent},
@@ -43,7 +45,7 @@ const appRoutes: Routes =[
                 enableTracing: false
 })
   ],
-  providers: [],
+  providers: [BuyerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

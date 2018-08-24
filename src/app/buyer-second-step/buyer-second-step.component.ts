@@ -20,18 +20,18 @@ export class BuyerSecondStepComponent implements OnInit {
 
   ngOnInit() {
   	
-
-  	this.buyerService.newFirstStepData.subscribe(
-  		data => console.log("----------------->>"+data)
-  	)
+ this.buyerService.cast.subscribe(
+  		data => this.newFirstStepData = data
+  	);
   }
 
   sendEmail(message: IMessage) {
-    this.emailService.sendEmail(message).subscribe(res => {
+   console.log(this.newFirstStepData)
+   /* this.emailService.sendEmail(message).subscribe(res => {
       console.log('AppComponent Success', res);
     }, error => {
       console.log('AppComponent Error', error);
     })
-  }
+  }*/
 
 }
