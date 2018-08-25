@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class BuyerService {
 
-	private newFirstStepData = new BehaviorSubject<any>(); 	
+	private newFirstStepData = new BehaviorSubject<any>({}); 	
 	cast = this.newFirstStepData.asObservable();
   constructor(private http:HttpClient) { }
 

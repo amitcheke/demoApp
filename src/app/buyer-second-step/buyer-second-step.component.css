@@ -1,3 +1,6 @@
-.required-field {
-	color:red;
+.world-map {
+    padding: 0% 0% 34% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/images/map.jpg);
 }
