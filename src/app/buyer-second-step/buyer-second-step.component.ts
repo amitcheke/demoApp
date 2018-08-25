@@ -12,6 +12,9 @@ export class BuyerSecondStepComponent implements OnInit {
 	firstStep: Array<any>;
 	error: string;
 	personalData = {}
+	
+	newFirstStepData:object;
+
   constructor(
   	private http: HttpClient,
   	private buyerService: BuyerService,

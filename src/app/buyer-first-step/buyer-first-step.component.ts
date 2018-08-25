@@ -10,6 +10,7 @@ import { BuyerService } from './../services/buyer.service';
 })
 export class BuyerFirstStepComponent implements OnInit {
 	dataObj:object;
+	newFirstStepData:object;
   constructor(public buyerService: BuyerService,private router: Router) { 
  
   }
