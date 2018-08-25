@@ -4,11 +4,11 @@ import {Router} from "@angular/router";
 import { BuyerService } from './../services/buyer.service';
 
 @Component({
-  selector: 'app-buyer-first-step',
-  templateUrl: './buyer-first-step.component.html',
-  styleUrls: ['./buyer-first-step.component.css']
+  selector: 'app-first-step',
+  templateUrl: './first-step.component.html',
+  styleUrls: ['./first-step.component.css']
 })
-export class BuyerFirstStepComponent implements OnInit {
+export class FirstStepComponent implements OnInit {
 	dataObj:object;
 	businessDetails:object;
   constructor(public buyerService: BuyerService,private router: Router) { 
@@ -80,7 +80,7 @@ industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENT
  this.dataObj = this.businessDetails;
   this.buyerService.setFirstStepData(this.dataObj);
 
-  	this.router.navigate(['buyer-second-step']);
+  	this.router.navigate(['second-step']);
   }
 
   isEmptyObject(obj) {

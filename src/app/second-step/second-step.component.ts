@@ -6,11 +6,11 @@ import { Router } from "@angular/router";
 
 
 @Component({
-  selector: 'app-buyer-second-step',
-  templateUrl: './buyer-second-step.component.html',
-  styleUrls: ['./buyer-second-step.component.css']
+  selector: 'app-second-step',
+  templateUrl: './second-step.component.html',
+  styleUrls: ['./second-step.component.css']
 })
-export class BuyerSecondStepComponent implements OnInit {
+export class SecondStepComponent implements OnInit {
 	firstStep: Array<any>;
 	error: string;
 	personalData = {}
@@ -42,7 +42,7 @@ export class BuyerSecondStepComponent implements OnInit {
   }
 
   backToPreviousStep(){
-  	this.router.navigate(['buyer-first-step']);
+  	this.router.navigate(['first-step']);
   }
 
 }

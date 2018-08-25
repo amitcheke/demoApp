@@ -9,17 +9,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FragmentPolyfillModule } from "./shared_module/fragment-polyfill.module";
-import { BuyerFirstStepComponent } from './buyer-first-step/buyer-first-step.component';
-import { BuyerSecondStepComponent } from './buyer-second-step/buyer-second-step.component';
+import { FirstStepComponent } from './first-step/first-step.component';
+import { SecondStepComponent } from './second-step/second-step.component';
 
 import { BuyerService } from './services/buyer.service';
 
 
 const appRoutes: Routes =[
   {path:'', component: HomeComponent},
-  {path:'buyer-first-step', component: BuyerFirstStepComponent},
+  {path:'first-step', component: FirstStepComponent},
   {path:'home', component: HomeComponent},
-  {path:'buyer-second-step', component: BuyerSecondStepComponent}
+  {path:'second-step', component: SecondStepComponent}
   
 ];
 
@@ -28,8 +28,8 @@ const appRoutes: Routes =[
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    BuyerFirstStepComponent,
-    BuyerSecondStepComponent
+    FirstStepComponent,
+    SecondStepComponent
   ],
   imports: [
     BrowserModule,
