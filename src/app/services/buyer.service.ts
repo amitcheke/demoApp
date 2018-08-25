@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -9,13 +8,16 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class BuyerService {
 
-	private newFirstStepData = new BehaviorSubject<any>({}); 	
-	cast = this.newFirstStepData.asObservable();
-  constructor(private http:HttpClient) { }
+	private businessDetails = new BehaviorSubject<any>({});
+
+	private userType = new BehaviorSubject<string>("");  	
+	
+	castBusinessDetails = this.businessDetails.asObservable();
+  	constructor() { }
 
 
   setFirstStepData(data: object){
-  	this.newFirstStepData.next(data);
+  	this.businessDetails.next(data);
   }
 
 }
