@@ -6,8 +6,7 @@ import { BuyerService } from './../services/buyer.service';
 @Component({
   selector: 'app-buyer-first-step',
   templateUrl: './buyer-first-step.component.html',
-  styleUrls: ['./buyer-first-step.component.css'],
-  providers: [BuyerService],
+  styleUrls: ['./buyer-first-step.component.css']
 })
 export class BuyerFirstStepComponent implements OnInit {
 	dataObj:object;
@@ -21,11 +20,9 @@ export class BuyerFirstStepComponent implements OnInit {
   	)
   }
 
-  businessDetails = {};
+  businessDetails = {service:null,industry:null,commodity:null,process:null};
 
-  businessDetails.service = "1";
-
-  services = ["1","DESIGNING (CAD/CAE)","MANUFACTURING","SUPPLIER ASSESSMENT","TOOLING & PROTOTYPE","REVERSEENGINEERING","AUTOMATION","SUPPLY CHAIN MANAGEMENT","WAREHOUSING","SOURCING","PROPRIOTORY PURCHASING","PROPRIOTORY SALES","3D SCANNING & PRINTING","OTHERS (SPECIFY)"
+  services = ["DESIGNING (CAD/CAE)","MANUFACTURING","SUPPLIER ASSESSMENT","TOOLING & PROTOTYPE","REVERSEENGINEERING","AUTOMATION","SUPPLY CHAIN MANAGEMENT","WAREHOUSING","SOURCING","PROPRIOTORY PURCHASING","PROPRIOTORY SALES","3D SCANNING & PRINTING","OTHERS (SPECIFY)"
 ];
 
 processes = ["HIGH PRESSURE DIE CASTINGS"

@@ -1,42 +1,46 @@
-<div class="container">
-  <form (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
-
-  <div class="form-group">
-    <label for="materialSelect">Service</label>
-    <select class="form-control" id="materialSelect" required [(ngModel)]="businessDetails.service" name="service" #service="ngModel" [ngClass]="{ 'is-invalid': f.submitted && service.invalid }">
-      <option *ngFor="let service of services;let i = index;" [value]="service" [selected]="service == '1'">{{service}}</option>
-    </select>
-        <div *ngIf="f.submitted && service.invalid" class="invalid-feedback">
-                            <div *ngIf="service.errors.required">Plese select service</div>
-                        </div>
-  </div>
-  <div class="form-group">
-    <label for="processSelect">Process</label>
-    <select class="form-control" id="processSelect" [(ngModel)]="businessDetails.process" name="process">
-      <option>Select Process</option>
-      <option *ngFor="let process of processes" [value]="process">{{process}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="processSelect">Commodity</label>
-    <select class="form-control" id="commoditySelect" [(ngModel)]="businessDetails.commodity" name="commodity">
-      <option>Select Commodity</option>
-      <option *ngFor="let commodity of commodities" [value]="commodity">{{commodity}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="processSelect">Industry</label>
-    <select class="form-control" id="industrySelect" [(ngModel)]="businessDetails.industry" name="industry">
-      <option>Select Industry</option>
-      <option *ngFor="let industry of industries" [value]="industry">{{industry}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="processSelect">Comments</label>
-    <textarea class="form-control" rows="5" id="comment" [(ngModel)]="businessDetails.comment" name="comment"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Next</button>
-  <!-- 
-  <button type="button" class="btn btn-primary" [routerLink]="['/buyer-second-step']">Next</button> -->
-</form>
-</div>
+		<div class="container">
+		  <form (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
+		  <div class="form-group">
+		    <label for="materialSelect"><span class="required-field">*</span>Service</label>
+		    <select class="form-control" id="materialSelect" required [(ngModel)]="businessDetails.service" name="service" #service="ngModel" [ngClass]="{ 'is-invalid': f.submitted && service.invalid }">
+		      <option [ngValue]="null">Select Service</option>
+		      <option *ngFor="let service of services;let i = index;" [value]="service">{{service}}</option>
+		    </select>
+		    <div *ngIf="f.submitted && service.invalid" class="invalid-feedback">
+                <div *ngIf="service.errors.required">Plese select service</div>
+            </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="processSelect">Process</label>
+		    <select class="form-control" id="processSelect" [(ngModel)]="businessDetails.process" name="process">
+		      <option [ngValue]="null" >Select Process</option>
+		      <option *ngFor="let process of processes" [value]="process">{{process}}</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="processSelect">Commodity</label>
+		    <select class="form-control" id="commoditySelect" [(ngModel)]="businessDetails.commodity" name="commodity">
+		      <option [ngValue]="null">Select Commodity</option>
+		      <option *ngFor="let commodity of commodities" [value]="commodity">{{commodity}}</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="processSelect">Industry</label>
+		    <select class="form-control" id="industrySelect" [(ngModel)]="businessDetails.industry" name="industry">
+		      <option [ngValue]="null">Select Industry</option>
+		      <option *ngFor="let industry of industries" [value]="industry">{{industry}}</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="processSelect">Comments</label>
+		    <textarea class="form-control" rows="5" id="comment" [(ngModel)]="businessDetails.comment" name="comment"></textarea>
+		  </div>
+		  <div class="form-row text-center">
+		    <div class="col-12">
+		         <button type="submit" class="btn btn-primary float-center">Next</button>
+		    </div>
+		 </div>
+		  <!-- 
+		  <button type="button" class="btn btn-primary" [routerLink]="['/buyer-second-step']">Next</button> -->
+		</form>
+		</div>

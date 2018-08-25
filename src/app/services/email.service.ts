@@ -5,11 +5,6 @@ import { Resolve } from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-export interface IMessage {
-  name?: string,
-  email?: string,
-  message?: string
-}
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +16,7 @@ export class EmailService {
 
   }
 
-  sendEmail(message: IMessage): Observable<IMessage> | any {
+  sendEmail(message: object): Observable<object> | any {
     return this.http.post(this.emailUrl, message)
       .map(response => {
         console.log('Sending email was successfull', response);

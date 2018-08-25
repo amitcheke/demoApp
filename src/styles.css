@@ -1,3 +1,11 @@
 body{
 	padding-top: 55px;
 }
+
+form{
+	padding-top: 10px;
+}
+
+.required-field {
+	color:red;
+}
