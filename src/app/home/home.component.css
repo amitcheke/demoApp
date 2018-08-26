@@ -3,11 +3,18 @@
 }
 
 .services{
+	margin-top: 5%;
 	height: auto;
 }
 
 .industries{
 	height: auto;
+	margin-top: 5%;
+}
+
+.aboutus{
+	height: auto;
+	margin-top: 7%;
 }
 
 .img {
@@ -53,6 +60,13 @@
 
 .text-cards{
 	height:20vmin;
+}
+
+.manufacturing-process-img{
+ 	background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4% 49% 39% 51%;
+    background-image: url(/assets/images/collage.jpg);
 }
 /* 
   ##Device = Desktops
@@ -155,6 +169,10 @@
   .text-cards{
 	height:20vmin;
 	}
+
+.manufacturing-title-strips{
+	height: 90px;	
+}		
   
 }
 
@@ -180,7 +198,10 @@
 
   .text-cards{
 	height:40vmin;
-	color: white
+	color: black
+}
+.manufacturing-title-strips{
+	height: 90px;	
 }
   
 }

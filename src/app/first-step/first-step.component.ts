@@ -19,7 +19,7 @@ export class FirstStepComponent implements OnInit {
   	 this.buyerService.castBusinessDetails.subscribe(
   		data => this.businessDetails = data
   	);
-
+     
   	 if(this.isEmptyObject(this.businessDetails)){
   	 	this.businessDetails = {service:null,industry:null,commodity:null,process:null};
   	 }

@@ -13,6 +13,7 @@ export class BuyerService {
 	private userType = new BehaviorSubject<string>("");  	
 	
 	castBusinessDetails = this.businessDetails.asObservable();
+	
   	constructor() { }
 
 

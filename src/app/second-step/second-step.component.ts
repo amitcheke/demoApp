@@ -34,11 +34,11 @@ export class SecondStepComponent implements OnInit {
   sendEmail(personalData) {
   var message = {...personalData, ...this.businessDetails};
   console.log(message)
-   /*this.emailService.sendEmail(message).subscribe(res => {
+   this.emailService.sendEmail(message).subscribe(res => {
       console.log('AppComponent Success', res);
     }, error => {
       console.log('AppComponent Error', error);
-    })*/
+    })
   }
 
   backToPreviousStep(){

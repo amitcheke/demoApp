@@ -11,8 +11,8 @@
           <h2>Who are you ?</h2>
         </div>
         <div class="row justify-content-center who-are-you">
-          <button class=" btn btn-outline-success mr-3 btn-lg" [routerLink]="['/buyer-first-step']">I am Buyer</button>
-          <button class="btn btn-outline-warning btn-lg">I am Seller</button>
+          <button class=" btn btn-outline-success mr-3 btn-lg" [routerLink]="['/first-step']">I am Buyer</button>
+          <button class="btn btn-outline-warning btn-lg" [routerLink]="['/first-step']">I am Seller</button>
         </div>
       </div>
     </div>
@@ -53,7 +53,9 @@
 <!-------------------------------------- SERVICES ------------------------->
 <div class="container">
   <div id="services" class="services">
-    <h2>We Provide the service</h2>
+    <div class="col-md-12 title-strips text-center">
+    	<h2>Services</h2>
+    </div>
     <div class="row p-1">
       <div class="col-md-4">
         <ul>
@@ -80,7 +82,9 @@
   </div>
   <!-------------------------  INDUSTRIES ------------------------->
   <div class="industries" id="industries">
-    <h2>We Deal with the Industries</h2>
+  	<div class="col-md-12 title-strips text-center">
+    	<h2>Industries</h2>
+    </div>
     <div class="row h-100">
       <div class="col-6 col-md-2 p-2 text-cards d-table" *ngFor="let industry of industriesArray; let i = index">
          <div class="h-100 text-cards text-center card card-block d-table-cell align-middle" [ngStyle]="{'background-color':getBackgoundColor(i)}" >
@@ -91,9 +95,30 @@
       </div>
     </div>
   </div>
+
+  <!-- Manifacturing process -->
+  <div class="industries" id="industries">
+  	<div class="col-md-12 manufacturing-title-strips text-center">
+    	<h2>Manufacturing Processes</h2>
+    </div>
+    <div class="row h-100">
+     <div class="manufacturing-process-img"></div>
+    </div>
+    <div class="row h-100">
+      <div class="col-6 col-md-2 p-2 text-cards d-table" *ngFor="let manufacturingProcess of manufacturingProcessArray; let i = index">
+         <div class="h-100 text-cards text-center card card-block d-table-cell align-middle">
+          <h6>{{manufacturingProcess}}</h6>
+         </div>
+      </div>
+    </div>
+  </div>
+	
+  <!-- ABOUT US -->
   <div class="aboutus" id="aboutus">
-    <h2>How we work</h2>
-    <div class="row p-3 h-100">
+    <div class="col-md-12 title-strips text-center">
+    	<h2>About Proccurate</h2>
+    </div>
+    <div class="row p-2 h-100">
       <p>Proccurate innovative is a professional and experienced company with a focus on price reductions, quality improvements and timely deliveries. We provide services which include designing, prototyping, manufacturing & logistics at lower costs.</p>
       <p>If your company procures direct and indirect goods and services in large quantities, India procurement could be the right option for you. We are specialized services which work towards long-term relationships focused on sustainable value creation. We offer end-to-end high-quality procurement services which deliver measurable value and ensure that you access the best suppliers, reduce lead time and costs while procuring from India. What your company needs is the ground-level experience and the right tools to help put innovative sourcing ideas to work and finally deliver results. Only a specialist service like Proccurate can ensure that your strategy is translated into action.</p>
       <p>Do you want to save the time you currently spend on purchasing? Outsourcing your procurement to India will let you concentrate on your core business activities. Proccurate innovative will help you improve every aspect of your procurement activity and literally transform the way you import from India. From strategic sourcing, supply chain management to supplier relationship management, our team will work towards achieving sustainable cost reduction for your business. You will be able to take advantage of value improvement as well because we will help you obtain products and services from the best suppliers in the country. From an in-depth market study, supplier due diligence to bespoke sourcing services, the experienced procurement team will help you with the best, cost-effective solutions for your business.</p>

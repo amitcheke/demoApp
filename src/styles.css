@@ -9,3 +9,19 @@ form{
 .required-field {
 	color:red;
 }
+
+.title-strips{
+	background-color: gray;
+	color: white;
+	height: 45px;
+}
+
+.manufacturing-title-strips{
+	background-color: gray;
+	color: white;
+	height: 45px;
+}
+
+ul {
+  list-style: none;
+}
