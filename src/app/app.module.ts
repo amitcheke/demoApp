@@ -18,7 +18,6 @@ import { BuyerService } from './services/buyer.service';
 const appRoutes: Routes =[
   {path:'', component: HomeComponent},
   {path:'first-step', component: FirstStepComponent},
-  {path:'home', component: HomeComponent},
   {path:'second-step', component: SecondStepComponent}
   
 ];

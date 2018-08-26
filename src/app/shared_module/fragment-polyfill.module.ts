@@ -61,7 +61,7 @@ export class NativeWindowScroller implements WindowScroller {
 
 		} else {
 
-			this.timer = setTimeout(
+			setTimeout(
 				() : void => {
 
 					this.doScroll( elementRef );

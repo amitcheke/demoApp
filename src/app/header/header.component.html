@@ -18,14 +18,20 @@ navbar-light bg-light">
        id="navbarSupportedContent"
        [ngClass]="{'show': !isCollapsed}">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" (click)="isCollapsed = !isCollapsed">
-        <a class="nav-link" [routerLink]="['/home']">Home</a>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']">Home</a>
       </li>
-      <li class="nav-item" (click)="isCollapsed = !isCollapsed">
-        <a class="nav-link"routerLink="/home" fragment="services">Services</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="" fragment="services">Services</a>
       </li>
-      <li class="nav-item" (click)="isCollapsed = !isCollapsed">
-        <a class="nav-link" routerLink="/home" fragment="industries">Industries</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="" fragment="industries">Industries</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="" fragment="manifacturingProcess">Manufacturing Processes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="" fragment="aboutus">About</a>
       </li>
     </ul>
   </div>
