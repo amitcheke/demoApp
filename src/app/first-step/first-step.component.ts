@@ -10,7 +10,7 @@ import { BuyerService } from './../services/buyer.service';
 })
 export class FirstStepComponent implements OnInit {
 	dataObj:object;
-	businessDetails:object;
+	businessDetails:any = {};
   constructor(public buyerService: BuyerService,private router: Router) { 
  
   }
@@ -59,7 +59,7 @@ processes = ["HIGH PRESSURE DIE CASTINGS"
 commodities = ["COPPER","BRASS","ZINC","ALUMINIUM","BRONZE","MAGNESIUM","STAINLESS STEEL","CARBON STEEL","STEEL (OTHER)","SPECIAL ALLOY","DUCTILE IRON","GREY IRON","IRON (OTHER)","POWDER METAL","PLASTIC","RUBBER","GLASS","TITANIUMTIN","OTHERS (SPECIFY)"
 ];
 
-industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENTS","ELECTRICAL COMPONENTS & EQUIPMENT","OIL & GAS â€“ ENERGY",
+industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENTS","ELECTRICAL COMPONENTS & EQUIPMENT","OIL & GAS – ENERGY",
 "CHEMICAL INDUSTRY","PACKAGING INDUSTRY"
 ,	"MINING INDUSTRY"
 ,	"PAPER INDUSTRY"
