@@ -35,9 +35,12 @@
 	padding-top: 8px;
 	width: 100%;
 	color: white;
-    text-align: center;
+  text-align: center;
 }
-
+.tagline{
+  text-align: center;
+  color: orange;
+}
 .img-footer{
 	position: absolute;
 	bottom: 0;

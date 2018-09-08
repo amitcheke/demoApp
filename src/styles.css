@@ -44,3 +44,8 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(/assets/images/jose-aljovin-331066-unsplash.jpg);
     color: white;
 }
+
+.footer{
+	background-color: #191f2f;
+	color: #8E939F;
+}
