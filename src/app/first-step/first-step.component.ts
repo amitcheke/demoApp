@@ -9,8 +9,13 @@ import { BuyerService } from './../services/buyer.service';
   styleUrls: ['./first-step.component.css']
 })
 export class FirstStepComponent implements OnInit {
+<<<<<<< HEAD
   dataObj:object;
   businessDetails:any = {};
+=======
+	dataObj:object;
+	businessDetails:any = {};
+>>>>>>> 6f69cff526755646135c4fa5c0f6529f630f16be
   constructor(public buyerService: BuyerService,private router: Router) { 
  
   }

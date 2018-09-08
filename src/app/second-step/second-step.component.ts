@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
 export class SecondStepComponent implements OnInit {
 	firstStep: Array<any>;
 	error: string;
-	personalData = {}
+	personalData:any = {}
 
 	businessDetails:object;
 
