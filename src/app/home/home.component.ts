@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
 industriesArray = ['Oil & Gas – Energy','Chemical Industry','Packaging industry','Mining Industry','Paper Industry','Construction','Utilities ','Agricultural & farm Industry','Industrial Machinery','Aerospace & Defense','Automobile components','Healthcare Equipment','Electrical components & Equipment',
 'Heavy Industrial & Electrical Equipment','Household & Commercial Appliances','Telecommunication'];
 
+serviceArray = ["DESIGNING", "SUPPLIER ASSESSMENTS", "3D SCANNING & 3D PRINTING", "SOURCING & MANUFACTURING", "TOOLING & PROTOTYPING", "MOLDFLOW SIMULATION", "SUPPLY CHAIN MANAGEMENT", "REVERSE ENGINEERING",
+"AUTOMATION"];
+
 industriesImageArray = ['gas_oil','checmical_industry','package','mining','paper','construction','tools','farming','machine','arospace_defence','automobile','medical','electrical_component','power','clean','telephone']
 
 color = ['#f1c40f','#e67e22','#d35400','#f39c12','#1abc9c','#16a085','#2ecc71','#27ae60','#ecf0f1','#95a5a6','#7f8c8d','#bdc3c7'];

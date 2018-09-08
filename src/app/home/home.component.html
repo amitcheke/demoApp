@@ -57,27 +57,9 @@
     	<h2>Services</h2>
     </div>
     <div class="row p-1">
-      <div class="col-md-4">
-        <ul>
-          <li>DESIGNING</li>
-          <li>SUPPLIER ASSESSMENTS</li>
-          <li>3D SCANNING & 3D PRINTING</li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul>
-          <li>SOURCING & MANUFACTURING</li>
-          <li>TOOLING & PROTOTYPING</li>
-          <li>MOLDFLOW SIMULATION</li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul>
-          <li>SUPPLY CHAIN MANAGEMENT</li>
-          <li>REVERSE ENGINEERING</li>
-          <li>AUTOMATION</li>
-        </ul>
-      </div>
+      <ul>
+        <li class="col-md-4 float-left" *ngFor="let service of serviceArray; let i = index">{{service}}</li>
+      </ul>
     </div>
   </div>
   <!-------------------------  INDUSTRIES ------------------------->
@@ -87,7 +69,7 @@
     </div>
     <div class="row h-100">
       <div class="col-6 col-md-2 p-2 text-cards d-table" *ngFor="let industry of industriesArray; let i = index">
-         <div class="h-100 text-cards text-center card card-block d-table-cell align-middle" [ngStyle]="{'background-color':getBackgoundColor(i)}" >
+         <div class="h-100 text-cards text-center card card-block d-table-cell align-middle">
          	
       	<img src="{{getIndustryIcon(i)}}" style="max-width: 50px;">
          	<h6>{{industry}}</h6>
@@ -104,12 +86,10 @@
     <div class="row h-100">
      <div class="manufacturing-process-img"></div>
     </div>
-    <div class="row h-100">
-      <div class="col-6 col-md-2 p-2 text-cards d-table" *ngFor="let manufacturingProcess of manufacturingProcessArray; let i = index">
-         <div class="h-100 text-cards text-center card card-block d-table-cell align-middle">
-          <h6>{{manufacturingProcess}}</h6>
-         </div>
-      </div>
+     <div class="row p-1">
+      <ul>
+        <li class="col-md-4 float-left" *ngFor="let manufacturingProcess of manufacturingProcessArray; let i = index">{{manufacturingProcess}}</li>
+      </ul>
     </div>
   </div>
 	
