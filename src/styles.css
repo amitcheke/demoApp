@@ -1,5 +1,6 @@
 body{
 	padding-top: 55px;
+	font-family: "Open Sans", sans-serif;
 }
 
 form{
@@ -24,4 +25,16 @@ form{
 
 ul {
   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.contact-form {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/images/jose-aljovin-331066-unsplash.jpg);
+    color: white;
 }

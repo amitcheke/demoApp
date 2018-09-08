@@ -9,25 +9,25 @@ import { BuyerService } from './../services/buyer.service';
   styleUrls: ['./first-step.component.css']
 })
 export class FirstStepComponent implements OnInit {
-	dataObj:object;
-	businessDetails:object;
+  dataObj:object;
+  businessDetails:any = {};
   constructor(public buyerService: BuyerService,private router: Router) { 
  
   }
 
   ngOnInit() {
-  	 this.buyerService.castBusinessDetails.subscribe(
-  		data => this.businessDetails = data
-  	);
+     this.buyerService.castBusinessDetails.subscribe(
+      data => this.businessDetails = data
+    );
      
-  	 if(this.isEmptyObject(this.businessDetails)){
-  	 	this.businessDetails = {service:null,industry:null,commodity:null,process:null};
-  	 }
+     if(this.isEmptyObject(this.businessDetails)){
+       this.businessDetails = {service:null,industry:null,commodity:null,process:null,otherService:null};
+     }
   }
 
   
 
-  services = ["DESIGNING (CAD/CAE)","MANUFACTURING","SUPPLIER ASSESSMENT","TOOLING & PROTOTYPE","REVERSEENGINEERING","AUTOMATION","SUPPLY CHAIN MANAGEMENT","WAREHOUSING","SOURCING","PROPRIOTORY PURCHASING","PROPRIOTORY SALES","3D SCANNING & PRINTING","OTHERS (SPECIFY)"
+  services = ["DESIGNING (CAD/CAE)","MANUFACTURING","SUPPLIER ASSESSMENT","TOOLING & PROTOTYPE","REVERSE ENGINEERING","AUTOMATION","SUPPLY CHAIN MANAGEMENT","WAREHOUSING","SOURCING","PROPRIOTORY PURCHASING","PROPRIOTORY SALES","3D SCANNING & PRINTING","OTHERS (SPECIFY)"
 ];
 
 processes = ["HIGH PRESSURE DIE CASTINGS"
@@ -59,19 +59,20 @@ processes = ["HIGH PRESSURE DIE CASTINGS"
 commodities = ["COPPER","BRASS","ZINC","ALUMINIUM","BRONZE","MAGNESIUM","STAINLESS STEEL","CARBON STEEL","STEEL (OTHER)","SPECIAL ALLOY","DUCTILE IRON","GREY IRON","IRON (OTHER)","POWDER METAL","PLASTIC","RUBBER","GLASS","TITANIUMTIN","OTHERS (SPECIFY)"
 ];
 
-industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENTS","ELECTRICAL COMPONENTS & EQUIPMENT","OIL & GAS – ENERGY",
-"CHEMICAL INDUSTRY","PACKAGING INDUSTRY"
-,	"MINING INDUSTRY"
-,	"PAPER INDUSTRY"
-,	"AGRICULTURAL & FARM INDUSTRY"
-,	"CONSTRUCTION"
-,	"HEAVY INDUSTRIAL & ELECTRICAL EQUIPMENT"
-,	"HEALTH CARE EQUIPMENT"
-,	"HOUSEHOLD & COMMERCIAL APPLIANCES" 
-,	"ELECTRONIC EQUIPMENT & COMPONENTS"
-,	"TELECOMMUNICATION" 
-,	"UTILITIES"
-,	"OTHERS (SPECIFY)"];
+industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENTS","ELECTRICAL COMPONENTS & EQUIPMENT","OIL & GAS ENERGY",
+"CHEMICAL INDUSTRY",
+"PACKAGING INDUSTRY"
+,  "MINING INDUSTRY"
+,  "PAPER INDUSTRY"
+,  "AGRICULTURAL & FARM INDUSTRY"
+,  "CONSTRUCTION"
+,  "HEAVY INDUSTRIAL & ELECTRICAL EQUIPMENT"
+,  "HEALTH CARE EQUIPMENT"
+,  "HOUSEHOLD & COMMERCIAL APPLIANCES" 
+,  "ELECTRONIC EQUIPMENT & COMPONENTS"
+,  "TELECOMMUNICATION" 
+,  "UTILITIES"
+,  "OTHERS (SPECIFY)"];
 
   submit(){
   console.log('-------------------');
@@ -80,7 +81,7 @@ industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENT
  this.dataObj = this.businessDetails;
   this.buyerService.setFirstStepData(this.dataObj);
 
-  	this.router.navigate(['second-step']);
+    this.router.navigate(['second-step']);
   }
 
   isEmptyObject(obj) {
@@ -91,6 +92,18 @@ industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENT
     }
 
     return true;
+}
+
+clearFilter(event){
+
+}
+
+onFileChange(event) {
+    let reader = new FileReader();
+    if(event.target.files && event.target.files.length > 0) {
+      let file = event.target.files[0];
+
+    }
 }
 
 }

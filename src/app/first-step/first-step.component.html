@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-fluid contact-form">
   <div class="row p-3">
-    <div class="col-md-8">
+    <div class="col-md-5 mx-auto">
       <form (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
         <div class="form-group">
           <label for="materialSelect"><span class="required-field">*</span>Service</label>
@@ -8,16 +8,18 @@
             <option [ngValue]="null">Select Service</option>
             <option *ngFor="let service of services;let i = index;" [value]="service">{{service}}</option>
           </select>
-          <div *ngIf="f.submitted && service.invalid" class="invalid-feedback">
-            <div *ngIf="service.errors.required">Plese select service</div>
+          <input type="text" class="form-control mt-2" *ngIf="businessDetails.service == 'OTHERS (SPECIFY)'" [(ngModel)]="businessDetails.otherService" name="otherService" #otherService="ngModel" [ngClass]="{ 'is-invalid': f.submitted && otherService.invalid }" required>
+          <div *ngIf="f.submitted && service.invalid " class="invalid-feedback">
+            <div *ngIf="service.errors.required">Please select service</div>
           </div>
         </div>
         <div class="form-group">
           <label for="processSelect">Process</label>
-          <select class="form-control" id="processSelect" [(ngModel)]="businessDetails.process" name="process">
+          <select class="form-control" id="processSelect" [(ngModel)]="businessDetails.process" name="process" (ngModelChange)="clearFilter($event)">
             <option [ngValue]="null">Select Process</option>
             <option *ngFor="let process of processes" [value]="process">{{process}}</option>
           </select>
+          <input type="text" class="form-control mt-2" *ngIf="businessDetails.process == 'OTHERS (SPECIFY)'" [(ngModel)]="businessDetails.otherProcess" name="otherProcess">
         </div>
         <div class="form-group">
           <label for="processSelect">Commodity</label>
@@ -25,6 +27,7 @@
             <option [ngValue]="null">Select Commodity</option>
             <option *ngFor="let commodity of commodities" [value]="commodity">{{commodity}}</option>
           </select>
+          <input type="text" class="form-control mt-2" *ngIf="businessDetails.commodity == 'OTHERS (SPECIFY)'" [(ngModel)]="businessDetails.otherCommodity" name="otherCommodity">
         </div>
         <div class="form-group">
           <label for="processSelect">Industry</label>
@@ -32,6 +35,11 @@
             <option [ngValue]="null">Select Industry</option>
             <option *ngFor="let industry of industries" [value]="industry">{{industry}}</option>
           </select>
+          <input type="text" class="form-control mt-2" *ngIf="businessDetails.industry == 'OTHERS (SPECIFY)'" [(ngModel)]="businessDetails.otherIndustry" name="otherIndustry">
+        </div>
+        <div class="form-group">
+          <label for="avatar">Upload File</label>
+          <input type="file" class="ml-2" id="avatar" (change)="onFileChange($event)" #fileInput>
         </div>
         <div class="form-group">
           <label for="processSelect">Comments</label>
