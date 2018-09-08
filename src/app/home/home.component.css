@@ -86,7 +86,7 @@
   }
 
   .img-footer{
-  	height: 30%;
+  	height: 40%;
   }
 
   .align-hero-baner-text{
@@ -113,7 +113,7 @@
   }
 
   .img-footer{
-  	height: 30%;
+  	height: 40%;
   }
   
   .align-hero-baner-text{
@@ -147,7 +147,7 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
   .img-footer{
-  	height: 30%;
+  	height: 40%;
   }
 }
 
@@ -159,7 +159,7 @@
 @media (min-width: 481px) and (max-width: 767px) {
   
   .img-footer{
-  	height: 30%;
+  	height: 40%;
   }
 
   .world-map{
