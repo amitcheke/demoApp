@@ -17,9 +17,21 @@ form{
 }
 
 .title-strips{
-	background-color: gray;
-	color: white;
-	height: 45px;
+    color: black;
+    color: #25c57d;
+    height: 45px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    margin: auto 0;
+    display: inline;
+}
+
+.title{
+	background-color: white;
+    width: auto;
+    display: inline;
 }
 
 .manufacturing-title-strips{
