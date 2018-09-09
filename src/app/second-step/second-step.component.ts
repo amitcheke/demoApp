@@ -14,7 +14,7 @@ export class SecondStepComponent implements OnInit {
 	firstStep: Array<any>;
 	error: string;
 	personalData:any = {}
-
+  showMaking:boolean = false;
 	businessDetails:object;
 
   constructor(
@@ -32,12 +32,15 @@ export class SecondStepComponent implements OnInit {
   }
 
   sendEmail(personalData) {
+  this.showMaking = true;  
   var message = {...personalData, ...this.businessDetails};
   console.log(message)
    this.emailService.sendEmail(message).subscribe(res => {
       console.log('AppComponent Success', res);
+      this.showMaking = false;
     }, error => {
       console.log('AppComponent Error', error);
+      this.showMaking = false;
     })
   }
 

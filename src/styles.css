@@ -34,6 +34,14 @@ form{
     display: inline;
 }
 
+.mask{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color:rgba(0,0,0,0.7);
+	z-index: 1;
+}
+
 .manufacturing-title-strips{
 	background-color: gray;
 	color: white;
@@ -60,4 +68,20 @@ h1, h2, h3, h4, h5, h6 {
 .footer{
 	background-color: #191f2f;
 	color: #8E939F;
+}
+
+.loader-img{
+	 background-image: url(/assets/images/loader.gif);
+}
+
+.loader-container{
+	color: black;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    margin: auto 0;
+    top: 47%;
+    display: inherit;
+    position: absolute;
 }

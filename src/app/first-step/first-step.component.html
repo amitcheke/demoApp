@@ -45,6 +45,9 @@
           <label for="processSelect">Comments</label>
           <textarea class="form-control" rows="5" id="comment" [(ngModel)]="businessDetails.comment" name="comment"></textarea>
         </div>
+        <div *ngIf="f.submitted">
+            <div *ngIf="f.form.invalid" style="font-size: 80%;color: #dc3545;">Please fill all required fields</div>
+        </div>
         <div class="form-row text-center">
           <div class="col-12">
             <button type="submit" class="btn btn-primary float-center">Next</button>
