@@ -35,6 +35,17 @@ export class SecondStepComponent implements OnInit {
   this.showMaking = true;  
   var message = {...personalData, ...this.businessDetails};
   console.log(message)
+
+  if(message.fileToBeUpload){
+    let input = new FormData();
+    message = null;
+    for (let key in message) {
+      let value = message[key];
+      input.append(key, message[key]);
+    }
+    message = input;
+  }
+  console.log(message)
    this.emailService.sendEmail(message).subscribe(res => {
       console.log('AppComponent Success', res);
       this.showMaking = false;

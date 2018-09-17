@@ -26,12 +26,16 @@ form{
     text-align: center;
     margin: auto 0;
     display: inline;
+    padding: 0;
 }
 
 .title{
 	background-color: white;
     width: auto;
     display: inline;
+    text-decoration: underline;
+    text-decoration-color: #000033;
+    text-underline-position: under;
 }
 
 .mask{
@@ -61,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/assets/images/jose-aljovin-331066-unsplash.jpg);
+    background-image: url(/assets/images/form_bck.jpg);
     color: white;
 }
 
@@ -84,4 +88,21 @@ h1, h2, h3, h4, h5, h6 {
     top: 47%;
     display: inherit;
     position: absolute;
+}
+
+.orange-btn {
+	color: #fe6500;
+    border-color: #fe6500;
+}
+
+.orange-btn:hover {
+    color: #ffffff;
+    background-color: #fe6500;
+    border-color: #fe6500;
+}
+
+.form-control{
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }

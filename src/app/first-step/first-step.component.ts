@@ -11,6 +11,7 @@ import { BuyerService } from './../services/buyer.service';
 export class FirstStepComponent implements OnInit {
   dataObj:object;
   businessDetails:any = {};
+  fileToBeUpload:any;
   constructor(public buyerService: BuyerService,private router: Router) { 
  
   }
@@ -78,10 +79,11 @@ industries = ["INDUSTRIAL MACHINERY","AEROSPACE & DEFENSE","AUTOMOBILE COMPONENT
   console.log('-------------------');
   console.log(this.businessDetails);
   console.log('-------------------');
- this.dataObj = this.businessDetails;
-  this.buyerService.setFirstStepData(this.dataObj);
 
-    this.router.navigate(['second-step']);
+  this.dataObj = this.businessDetails;
+  this.dataObj['fileToBeUpload'] = this.fileToBeUpload;
+  this.buyerService.setFirstStepData(this.dataObj);
+  this.router.navigate(['second-step']);
   }
 
   isEmptyObject(obj) {
@@ -101,8 +103,7 @@ clearFilter(event){
 onFileChange(event) {
     let reader = new FileReader();
     if(event.target.files && event.target.files.length > 0) {
-      let file = event.target.files[0];
-
+      this.fileToBeUpload = event.target.files[0];
     }
 }
 
