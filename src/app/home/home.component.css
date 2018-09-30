@@ -39,9 +39,7 @@
 }
 .tagline{
   text-align: center;
-  color: orange;
-  position: absolute;
-  top: 40%;
+  /*color: orange;*/
 }
 
 .tagline h2{
