@@ -36,23 +36,26 @@ export class SecondStepComponent implements OnInit {
   var message = {...personalData, ...this.businessDetails};
   console.log(message)
 
-  if(message.fileToBeUpload){
-    let input = new FormData();
-    message = null;
-    for (let key in message) {
-      let value = message[key];
-      input.append(key, message[key]);
+    if(message.fileToBeUpload){
+      let input = new FormData();
+      input.append('file', message['fileToBeUpload']);
+      delete message['fileToBeUpload'];
+      this.emailService.sendEmailWithFile(input,message).subscribe(res => {
+        console.log('AppComponent Success', res);
+        this.showMaking = false;
+      }, error => {
+        console.log('AppComponent Error', error);
+        this.showMaking = false;
+      })
+    } else {
+      this.emailService.sendEmail(message).subscribe(res => {
+        console.log('AppComponent Success', res);
+        this.showMaking = false;
+      }, error => {
+        console.log('AppComponent Error', error);
+        this.showMaking = false;
+      })
     }
-    message = input;
-  }
-  console.log(message)
-   this.emailService.sendEmail(message).subscribe(res => {
-      console.log('AppComponent Success', res);
-      this.showMaking = false;
-    }, error => {
-      console.log('AppComponent Error', error);
-      this.showMaking = false;
-    })
   }
 
   backToPreviousStep(){
