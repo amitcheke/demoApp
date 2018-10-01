@@ -35,6 +35,10 @@ export class EmailService {
     .map(res => res)
     .switchMap(data => {
         message['fileid'] = data['data'];
+        console.log("----------");
+        console.log(data);
+        console.log(message);
+        console.log("----------");
         return this.http.post(this.emailUrl, message);
     })
     .map(res => {
