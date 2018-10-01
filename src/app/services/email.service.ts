@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Resolve } from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/switchMap';
 
 
 @Injectable({
@@ -11,6 +12,7 @@ import 'rxjs/add/operator/catch';
 })
 export class EmailService {
   private emailUrl = '/feedback/saveFeedback';
+  private fileUploadUrl = '/feedback/upload'
 
   constructor(private http: HttpClient) {
 
@@ -27,4 +29,16 @@ export class EmailService {
         return Observable.throw(error)
       })
   }
+
+  sendEmailWithFile(file, message: object) {
+   return this.http.post(this.fileUploadUrl, file)
+    .map(res => res)
+    .switchMap(data => {
+        message['fileid'] = data['fileid'];
+        return this.http.post(this.emailUrl, message);
+    })
+    .map(res => {
+      return res;
+    });
+}
 }
