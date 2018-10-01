@@ -34,7 +34,7 @@ export class EmailService {
    return this.http.post(this.fileUploadUrl, file)
     .map(res => res)
     .switchMap(data => {
-        message['fileid'] = data['fileid'];
+        message['fileid'] = data['data'];
         return this.http.post(this.emailUrl, message);
     })
     .map(res => {
